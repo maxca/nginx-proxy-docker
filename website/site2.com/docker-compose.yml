@@ -1,4 +1,4 @@
-version: '3'
+version: '3.8'
 services:
   nginx:
     image: nginx
@@ -11,5 +11,5 @@ services:
       - .:/etc/nginx/conf.d
 networks:
   default:
-    external:
-      name: nginx-proxy-example
+    driver: b
+    external: true

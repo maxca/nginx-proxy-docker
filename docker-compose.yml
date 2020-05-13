@@ -1,5 +1,5 @@
 # docker-compose.yml
-version: '3'
+version: '3.6'
 services:
   nginx-proxy:
     image: jwilder/nginx-proxy
@@ -29,4 +29,4 @@ volumes:
 networks:
   default:
     external:
-      name: nginx-proxy-example
+      name: nginx-proxy-network
