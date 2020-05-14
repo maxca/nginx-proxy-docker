@@ -2,11 +2,11 @@ version: '3.6'
 services:
   nginx:
     image: nginx:latest
-    container_name: nginx
+    container_name: nginx-jenkins
     environment:
-      - VIRTUAL_HOST=jenkin.backendteam.xyz
-      - LETSENCRYPT_HOST=jenkin.backendteam.xyz
-      - LETSENCRYPT_EMAIL=email@jenkin.backendteam.xyz
+      - VIRTUAL_HOST=jenkins.backendteam.xyz
+      - LETSENCRYPT_HOST=jenkins.backendteam.xyz
+      - LETSENCRYPT_EMAIL=email@jenkins.backendteam.xyz
     volumes:
       - .:/etc/nginx/conf.d
       #- ${NGINX_DEFAULT_CONF:-./nginx/default.con}:/etc/nginx/conf.d/default.conf
